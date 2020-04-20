@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Artikel</title>
+  </head>
+  <style>
+      body{
+          background-color: #FFC8CB;
+      }
+      .card{
+        position: absolute;
+        width: 867px;
+        height: auto;
+        left: 66px;
+        top: 100px;
+        background: #FFFFFF;
+        box-shadow: 5px 4px 4px #7D7D7D;
+      }
+      .card-samping1{
+        position: absolute;
+        width: 266px;
+        height: 298px;
+        background: rgb(255, 255, 255);
+        left: 955px;
+        top: 150px;
+      }
+      .card-samping2{
+        position: absolute;
+        width: 266px;
+        height: 298px;
+        left: 955px;
+        top: 480px;
+        background: #FFFFFF;
+      }
+      /* .card-samping3{
+        position: absolute;
+        width: 266px;
+        height: 298px;
+        left: 955px;
+        top: 810px;
+        background: #FFFFFF;
+      } */
+      #kata-samping{
+        position: absolute;
+        left: 1032px;
+        top: 100px;
+      }
+      #imgkonten{
+        width: 50%;
+        height: 244px;
+      }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+      <a class="navbar-brand" href="#"><img style="width: 140px;" src="imghome/logotubes.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-100 order-4 dual-collapse2" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto ">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tanya Si Tangker</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Kanker
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">kanker Serviks</a>
+                <a class="dropdown-item" href="#">Kanker Hati</a>
+                <a class="dropdown-item" href="#">Kanker Payudara</a>
+                <a class="dropdown-item" href="#">Kanker Paru-paru</a>
+                <a class="dropdown-item" href="#">Kanker Lambung</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rumah Sakit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account <img style="width: 27px;" src="imghome/person.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+<!-- ini form login modal-->
+<div class="modal fade" id="Loginform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #FFC8CB;">
+      <div class="modal-body">
+        <center><img src="imghome/logotubes.png" style="width: 300px;" alt="">
+        <p style="color: white;">Silahkan login terlebih dahulu</p></center>
+        <form action="">
+          <div class="form-group mb-2 ">
+            <label style="color: white;" for="email">Your email</label>
+            <input type="email" id="Form-email" class="form-control validate">
+          </div>
+          <div class="form-group mb-4">
+            <label style="color: white;" for="password">Password</label>
+            <input type="password" id="Form-password" class="form-control validate">
+          </div>
+        </form>
+        <div class="text-center mb-3">
+          <button style="color: white;" type="button" class="btn btn-secondary">Sign in</button>
+        </div>
+        <center>
+          <p>Anda belum punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Registerform" data-dismiss="modal">Buat akun!</a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -_- -->
+
+
+<!-- ini form Register modal -->
+<div class="modal fade" id="Registerform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #FFC8CB;">
+      <div class="modal-body">
+        <center><img src="imghome/logotubes.png" style="width: 300px;" alt="">
+        <p style="color: white;">Silahkan Buat akun terlebih dahulu</p></center>
+        <form action="">
+          <div class="row">
+            <div class="col">
+              <label style="color: white;" for="email">First name</label>
+              <input type="text" id="Form-email" class="form-control validate">
+            </div>
+            <div class="col">
+              <label style="color: white;" for="email">Last name</label>
+              <input type="text" id="Form-email" class="form-control validate">
+            </div>
+          </div>
+          <div class="form-group mb-2 ">
+            <label style="color: white;" for="email">Your email</label>
+            <input type="email" id="Form-email" class="form-control validate">
+          </div>
+          <div class="form-group mb-2">
+            <label style="color: white;" for="password">Password</label>
+            <input type="password" id="Form-password" class="form-control validate">
+          </div>
+          <div class="form-group mb-4">
+            <label style="color: white;" for="password">Confirm Password</label>
+            <input type="password" id="Form-password" class="form-control validate">
+          </div>
+        </form>
+        <div class="text-center mb-3">
+          <button style="color: white;" type="button" class="btn btn-secondary">Sign in</button>
+        </div>
+        <center>
+          <p>Anda sudah punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Loginform" data-dismiss="modal" >Login!</a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -_- -->
+    
+      <!-- isi artikel -->
+      <div class="card text-center">
+            <div class="card-body"><br>
+                <img id="imgkonten" src="" alt=""> <!-- gambar konten -->
+                <h5 class="card-title text-left">judul</h5>
+                <p class="card-text text-left">Tinggal isi konten</p><br><br>
+            </div>
+      </div>
+
+      <h4 id="kata-samping">Artikel terkait</h4>
+
+      <!-- artikel terkait -->
+      <div class="card card-samping1" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">content.</p>
+        </div>
+      </div>
+      <div class="card card-samping2" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"> content.</p>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
