@@ -18,8 +18,38 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	function __construct() {
+		parent::__construct();
+		$this->load->model('M_Login');
+	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('users/header');
+		$this->load->view('users/home');
+	}
+
+	public function Login() {
+		$message="Invalid email or password";
+		if ($this->input->method() == 'post') {
+			$data = ['email' => $this->input->post('email'), 'password' => $this->input->post('password')];
+			if ($this->M_Login->loginuser($data)) {
+				$this->session->set_userdata('email', $data['email']);
+                redirect("index.php/C_User");
+            } else {
+				$this->load->view('users/header');
+                $this->load->view('users/home');
+
+            }
+		}else{
+			$this->load->view('users/header');
+			$this->load->view('users/home');
+		}
+		
+	}
+
+	public function Register() {
+		$this->load->view('users/header');
+		$this->load->view('users/home');
 	}
 }
