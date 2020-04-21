@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 07:29 AM
+-- Generation Time: Apr 21, 2020 at 01:40 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `profile` (
-  `idUser` int(11) NOT NULL,
-  `firstname` varchar(128) NOT NULL,
-  `lastname` varchar(128) NOT NULL,
+  `id` int(11) NOT NULL,
   `email` varchar(128) NOT NULL,
+  `firstName` varchar(128) NOT NULL,
+  `lastName` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -40,9 +40,29 @@ CREATE TABLE `profile` (
 -- Dumping data for table `profile`
 --
 
-INSERT INTO `profile` (`idUser`, `firstname`, `lastname`, `email`, `password`) VALUES
-(1, 'The', 'Yabeh', 'abbsumarfs@gmail.com', '1234'),
-(2, 'admin', 'admin', 'admin@gmail.com', '1234');
+INSERT INTO `profile` (`id`, `email`, `firstName`, `lastName`, `password`) VALUES
+(1, 'admin@gmail.com', 'admin', 'admin', '1234'),
+(7, 'huehuelord@gmail.com', 'huehue', 'lord', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rumahsakit`
+--
+
+CREATE TABLE `rumahsakit` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `nohp` varchar(128) NOT NULL,
+  `alamat` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rumahsakit`
+--
+
+INSERT INTO `rumahsakit` (`id`, `nama`, `nohp`, `alamat`) VALUES
+(1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510');
 
 --
 -- Indexes for dumped tables
@@ -52,7 +72,13 @@ INSERT INTO `profile` (`idUser`, `firstname`, `lastname`, `email`, `password`) V
 -- Indexes for table `profile`
 --
 ALTER TABLE `profile`
-  ADD PRIMARY KEY (`idUser`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rumahsakit`
+--
+ALTER TABLE `rumahsakit`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -62,7 +88,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `rumahsakit`
+--
+ALTER TABLE `rumahsakit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
