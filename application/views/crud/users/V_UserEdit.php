@@ -24,8 +24,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_User/') ?>">User</a>
-          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_RumahSakit/') ?>">Rumah Sakit</a>
-          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_TanyaTangker/') ?>">Tanya Tangker</a>
+          <a class="nav-item nav-link" href="#">Rumah Sakit</a>
+          <a class="nav-item nav-link" href="#">Tanya Tangker</a>
         </div>
       </div>
     </nav>
