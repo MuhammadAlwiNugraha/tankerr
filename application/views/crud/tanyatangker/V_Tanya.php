@@ -35,7 +35,7 @@
   <br>
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Add User
+  Add Pertanyaan
 </button>
 
 <!-- Modal -->
@@ -43,28 +43,24 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah User</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Pertanyaan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" action="<?= base_url();?>index.php/C_User/create">
+        <form method="post" action="<?= base_url();?>index.php/C_TanyaTangker/create">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="text" class="form-control" name="email" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">First Name</label>
-            <input type="text" class="form-control" name="firstName" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">Nama</label>
+            <input type="text" class="form-control" name="nama" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Last Name</label>
-            <input type="text" class="form-control" name="lastName" aria-describedby="emailHelp">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" name="password">
+            <label for="exampleInputEmail1">Pertanyaan</label>
+            <input type="text" class="form-control" name="pertanyaan" aria-describedby="emailHelp">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -83,8 +79,8 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Email</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">LastName</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Pertanyaan</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -93,10 +89,10 @@
       <tr>
         <th scope="row"><?php echo $row->id; ?></th>
         <td><?php echo $row->email; ?></td>
-        <td><?php echo $row->firstName; ?></td>
-        <td><?php echo $row->lastName; ?></td>
-        <td><a href="<?php echo site_url('index.php/C_User/edit');?>/<?php echo $row->id;?>">Edit</a> |  
-            <a href="<?php echo site_url('index.php/C_User/delete');?>/<?php echo $row->id;?>">Delete</a></td>
+        <td><?php echo $row->nama; ?></td>
+        <td><?php echo $row->pertanyaan; ?></td>
+        <td><a href="<?php echo site_url('index.php/C_TanyaTangker/edit');?>/<?php echo $row->id;?>">Edit</a> |  
+            <a href="<?php echo site_url('index.php/C_TanyaTangker/delete');?>/<?php echo $row->id;?>">Delete</a></td>
       </tr>
     <?php } ?>
     </tbody>

@@ -16,7 +16,7 @@
     <title>CRUD Edit</title>
   </head>
   <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="<?php echo base_url() ?>">Dashboard</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,25 +31,21 @@
     </nav>
     
   	<div class="container">
-  	<form method="post" action="<?php echo site_url('index.php/C_User/update')?>/<?php echo $row->id; ?>">
+  	<form method="post" action="<?= base_url();?>index.php/C_TanyaTangker/create">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" name="email" value="<?php echo $row->email; ?>" aria-describedby="emailHelp" disabled>
+            <label for="exampleInputEmail1">Email</label>
+            <input type="text" class="form-control" name="email" value="<?php echo $row->email; ?>" aria-describedby="emailHelp" disabled>
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">First Name</label>
-            <input type="text" class="form-control" name="firstName" value="<?php echo $row->firstName; ?>"aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">Nama</label>
+            <input type="text" class="form-control" name="nama" value="<?php echo $row->nama; ?>" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Last Name</label>
-            <input type="text" class="form-control" name="lastName" value="<?php echo $row->lastName; ?>"aria-describedby="emailHelp">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">New Password</label>
-            <input type="password" class="form-control" name="password" value="<?php echo $row->password; ?>">
+            <label for="exampleInputEmail1">Pertanyaan</label>
+            <input type="text" class="form-control" name="pertanyaan" value="<?php echo $row->pertanyaan; ?>" aria-describedby="emailHelp">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
-        </form>	
+        </form>
   	</div>
   </body>
 </html>

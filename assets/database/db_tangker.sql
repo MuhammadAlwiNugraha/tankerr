@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 01:40 PM
+-- Generation Time: Apr 22, 2020 at 03:48 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -64,6 +64,26 @@ CREATE TABLE `rumahsakit` (
 INSERT INTO `rumahsakit` (`id`, `nama`, `nohp`, `alamat`) VALUES
 (1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tanyatangker`
+--
+
+CREATE TABLE `tanyatangker` (
+  `id` int(11) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `pertanyaan` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tanyatangker`
+--
+
+INSERT INTO `tanyatangker` (`id`, `email`, `nama`, `pertanyaan`) VALUES
+(2, 'huehuelord@gmail.com', 'Yabi', 'sak berak om');
+
 --
 -- Indexes for dumped tables
 --
@@ -81,6 +101,12 @@ ALTER TABLE `rumahsakit`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tanyatangker`
+--
+ALTER TABLE `tanyatangker`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -94,6 +120,12 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `rumahsakit`
 --
 ALTER TABLE `rumahsakit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tanyatangker`
+--
+ALTER TABLE `tanyatangker`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
