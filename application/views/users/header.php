@@ -59,8 +59,42 @@
     <div class="modal-content" style="background-color: #FFC8CB;">
       <div class="modal-body">
         <center><img src="<?php echo $this->config->item('base_url'); ?>assets/logotubes.png" style="width: 300px;" alt="">
+          <?php if ($this->session->flashdata('success')) : ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('success') ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <?php elseif($this->session->flashdata('error')) : ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('error') ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <?php endif ?>
         <p style="color: white;">Silahkan login terlebih dahulu</p></center>
-        <form action="<?= base_url();?>index.php/welcome/login/" method="post">
+
+        <form class="user" method="POST" action="<?= base_url('login/aksi_login') ?>">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="username" placeholder="Masukkan Username" autocomplete="off" required name="username">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required name="password">
+                    </div>
+                    <div class="form-group">
+                      <select name="role" id="role" class="form-control" required>
+                        <option value="">Masuk Sebagai</option>
+                        <option value="user">user</option>
+                        <option value="login">Admin</option>
+                      </select>
+                    </div>
+                    <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-secondary" name="login">Login</button>
+                  </div>
+        </form>
+        <!-- <form action="<?= base_url();?>index.php/welcome/login/" method="post">
           <div class="form-group mb-2 ">
             <label style="color: white;" for="email">Your email</label>
             <input type="email" name="email" id="Form-email" placeholder="Enter Email" class="form-control validate" required="required">
@@ -72,7 +106,7 @@
           <div class="text-center mb-3">
           <button style="color: white;" type="submit" class="btn btn-secondary">Sign in</button>
         </div>
-        </form>
+        </form> -->
         <center>
           <p>Anda belum punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Registerform" data-dismiss="modal">Buat akun!</a></p>
         </center>

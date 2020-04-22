@@ -20,5 +20,9 @@ class M_Login extends CI_Model{
 		//select 1 row profile based on username (from param) and return it, if the data is not found then return false
 		return $this->check_email($email) ? $this->db->get_where('profile', ['email' => $email])->row_array() : false;
 	}
+
+	function cek_login($table,$where){		
+		return $this->db->get_where($table,$where);
+	}	
 }
 ?>

@@ -31,22 +31,18 @@
     </nav>
     
   	<div class="container">
-  	<form method="post" action="<?php echo site_url('index.php/C_User/update')?>/<?php echo $row->id; ?>">
+  	<form method="post" action="<?php echo site_url('index.php/C_RumahSakit/update')?>/<?php echo $row->id; ?>">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" name="email" value="<?php echo $row->email; ?>" aria-describedby="emailHelp" disabled>
+            <label for="exampleInputEmail1">Nama Rumah Sakit</label>
+            <input type="text" class="form-control" name="nama" value="<?php echo $row->nama; ?>" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">First Name</label>
-            <input type="text" class="form-control" name="firstName" value="<?php echo $row->firstName; ?>"aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">No. Telepon</label>
+            <input type="text" class="form-control" name="nohp" value="<?php echo $row->nohp; ?>"aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Last Name</label>
-            <input type="text" class="form-control" name="lastName" value="<?php echo $row->lastName; ?>"aria-describedby="emailHelp">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">New Password</label>
-            <input type="password" class="form-control" name="password" value="<?php echo $row->password; ?>">
+            <label for="exampleInputEmail1">Alamat</label>
+            <input type="text" class="form-control" name="alamat" value="<?php echo $row->alamat; ?>"aria-describedby="emailHelp">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>	
