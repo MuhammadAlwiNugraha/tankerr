@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Home</title>
+  </head>
+  <style>
+      .navbar{
+        width: 100%;
+      }
+      .jumbotron{
+        position: relative;
+        width: 1280px;
+        height: 620px;
+        background: #FFC8CB;
+      }
+      .welcome{
+        position: absolute;
+        width: 520px;
+        height: 216px;
+        left: 57px;
+        top: 180px;
+        font-family: Play;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 90px;
+        line-height: 108px;
+        color: black;
+      }
+      .welcome2{
+        position: absolute;
+        width: 441px;
+        height: 113px;
+        left: 100px;
+        top: 280px;
+      }
+      .welcome3{
+        position: absolute;
+        width: 310px;
+        height: 56px;
+        left: 263px;
+        top: 420px;
+        font-family: Play;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        color: #000000;
+      }
+      .img2{
+        position: absolute;
+        width: 529px;
+        height: 430px;
+        left: 618px;
+        top: 100px;
+
+      }
+      .rectangle2{
+        position: absolute;
+        width: 528px;
+        height: 430px;
+        left: 656px;
+        top: 75px;
+        background: #B49E9E;
+      }
+      .rectangle1{
+        position: absolute;
+        width: 528px;
+        height: 430px;
+        left: 702px;
+        top: 44px;
+        background: #CCB1B1;
+      }
+      .jumbotron-dua{
+        width: 640px;
+      height: 673px;
+      background-color:#BA7777;
+      }
+      .btn-secondary{
+        background: #BA7777;
+        width: 95px;
+        height: 40px;
+        font-size: 13px;
+      }
+      .imgfooter{
+        position: absolute;
+        width: 300px;
+        height: 90px;
+        left: 490px;
+      }
+      
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+      <a class="navbar-brand" href="#"><img style="width: 140px;" src="imghome/logotubes.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-100 order-4 dual-collapse2" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto ">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tanya Si Tangker</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Kanker
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">kanker Serviks</a>
+                <a class="dropdown-item" href="#">Kanker Hati</a>
+                <a class="dropdown-item" href="#">Kanker Payudara</a>
+                <a class="dropdown-item" href="#">Kanker Paru-paru</a>
+                <a class="dropdown-item" href="#">Kanker Lambung</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rumah Sakit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account <img style="width: 27px;" src="imghome/person.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+<!-- ini form login modal-->
+<div class="modal fade" id="Loginform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #FFC8CB;">
+      <div class="modal-body">
+        <center><img src="imghome/logotubes.png" style="width: 300px;" alt="">
+        <p style="color: white;">Silahkan login terlebih dahulu</p></center>
+        <form action="">
+          <div class="form-group mb-2 ">
+            <label style="color: white;" for="email">Your email</label>
+            <input type="email" name="email" id="Form-email" class="form-control validate">
+          </div>
+          <div class="form-group mb-4">
+            <label style="color: white;" for="password">Password</label>
+            <input type="password" name="password"  id="Form-password" class="form-control validate">
+          </div>
+        </form>
+        <div class="text-center mb-3">
+          <button style="color: white;" type="button" id="btnlogin" class="btn btn-secondary">Sign in</button>
+        </div>
+        <center>
+          <p>Anda belum punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Registerform" data-dismiss="modal">Buat akun!</a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -_- -->
+
+
+<!-- ini form Register modal -->
+<div class="modal fade" id="Registerform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #FFC8CB;">
+      <div class="modal-body">
+        <center><img src="imghome/logotubes.png" style="width: 300px;" alt="">
+        <p style="color: white;">Silahkan Buat akun terlebih dahulu</p></center>
+        <form action="">
+          <div class="row">
+            <div class="col">
+              <label style="color: white;" for="first-name">First name</label>
+              <input type="text" name="firstname" id="Form-firstname" class="form-control validate">
+            </div>
+            <div class="col">
+              <label style="color: white;" for="last-name">Last name</label>
+              <input type="text" name="lastname" id="Form-lastname" class="form-control validate">
+            </div>
+          </div>
+          <div class="form-group mb-2 ">
+            <label style="color: white;" for="email">Your email</label>
+            <input type="email" id="Form-email" class="form-control validate">
+          </div>
+          <div class="form-group mb-2">
+            <label style="color: white;" for="password">Password</label>
+            <input type="password" name="password" id="Form-password" class="form-control validate">
+          </div>
+          <div class="form-group mb-4">
+            <label style="color: white;" for="password">Confirm Password</label>
+            <input type="password" name="con-password" id="Form-con-password" class="form-control validate">
+          </div>
+        </form>
+        <div class="text-center mb-3">
+          <button style="color: white;" type="button" id="btnregis" class="btn btn-secondary">Sign in</button>
+        </div>
+        <center>
+          <p>Anda sudah punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Loginform" data-dismiss="modal" >Login!</a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -_- -->
+
+  <center>
+    <div class="jumbotron">
+        <h1 class="display-4 welcome">Welcome To</h1>
+        <img class="welcome2" src="imghome/logotubes.png" alt="">
+        <p class="welcome3">Tenang, sekarang Kamu bisa Terhindar dari Kanker</p>
+        <div class="rectangle1"></div>
+        <div class="rectangle2"></div>
+        <img class="img2" src="imghome/img2.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3>Anda Merasa sakit?</h3><hr>
+        </div>
+      </div><br><br>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4 text-center">
+          <img style="height: 110px; width: 110px; left: 100px; " src="imghome/question.png" alt="">
+          <h4>Tanya Si Tangker</h4>
+          <p style="text-align: center;">Bertanya sama si Tangker tentang kanker <br> kapan saja dan dimana saja</p>
+          <button type="button" class="btn btn-secondary">Learn more</button>
+        </div>
+        <div class="col mb-4 text-center">
+          <img style="height: 110px; width: 110px; " src="imghome/hospital.png" alt="">
+          <h4>Rumah Sakit</h4>
+          <p style="text-align: center;">Daftar rumah sakit yang menangani pasien kanker</p>
+          <button type="button" class="btn btn-secondary">Learn more</button>
+        </div>
+        <div class="col mb-4 text-center">
+          <img style="height: 110px; width: 110px; " src="imghome/lamp.png" alt="">
+          <h4>Tips</h4>
+          <p style="text-align: center;">Tips terkait pencegahan dan pengobatan penyakit kanker</p>
+          <button type="button" class="btn btn-secondary">Learn more</button>
+        </div>
+      </div>
+    </div><br><br>
+  </center>
+      <!-- <div class="row">
+        <div class="col text-center" style="background-color: #e7e0e8;">
+          <div style="margin-top: 170px;">
+              <h1 >Apakah Kamu Tau?</h1>
+              <p class="lead">Hari Kanker Sedunia dirayakan 
+                setiap 4 Februari untuk meningkatkan 
+                kesadaran terhadap kanker dan mendorong 
+                pencegahan, deteksi, dan pengobatan kanker. </p>
+              <a class="btn" style="background-color: gray;" href="#" role="button">Learn more</a>
+            </div>
+        </div>
+        <div class="col" style="padding-left: 0px;">
+          <img src="kanker.jpg" style="width: 106%;" alt="">
+        </div>
+      </div>
+      
+      <br><hr>
+        <div class="lastimg">
+          <img class="imgfooter" src="logotubes.png" alt="">
+        </div>
+        <br><br><br><br> -->
+
+      <footer style="background-color: rgb(173, 110, 110); color: white;" class="main-footer text-center">
+        <strong> &copy Tangker, 2020</strong>
+      </footer>
+        
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
