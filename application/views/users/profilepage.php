@@ -11,7 +11,7 @@
     <title>Tangker</title>
   </head>
   <style>
-     body{
+      body{
           background-color: #E7A3A3;
       }
       .awalan{   
@@ -111,7 +111,7 @@
             <div class="card-body">
               <h5 class="card-title text-left ">Ini data akun kamu!</h5>
               <p class="card-text text-left">*Silahkan ubah data kamu jika perlu</p>
-              <img class="img-hiasan" src="assets/orang2.png" alt="">
+              <img class="img-hiasan" src="Imghome/orang2.png" alt="">
               <form action="">
                   <div class="form-group">
                     <label id="label1" for="">Nama kamu</label>
@@ -128,7 +128,7 @@
                   <button type="button" id="btnubah" class="btn btn-secondary">ubah</button>
               </form>
             </div>
-          </div>
+          </div>s
       </center>
             <footer style="background-color: rgb(173, 110, 110); color: white;" class="main-footer text-center">
         <strong> &copy Tangker, 2020</strong>

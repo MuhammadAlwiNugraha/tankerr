@@ -24,25 +24,25 @@
               <a class="nav-link" href="<?= base_url();?>index.php/welcome/index">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tanya Si Tangker</a>
+              <a class="nav-link" href="<?= base_url();?>index.php/welcome/tanyatangker">Tanya Si Tangker</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Kanker
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">kanker Serviks</a>
-                <a class="dropdown-item" href="#">Kanker Hati</a>
-                <a class="dropdown-item" href="#">Kanker Payudara</a>
-                <a class="dropdown-item" href="#">Kanker Paru-paru</a>
-                <a class="dropdown-item" href="#">Kanker Lambung</a>
+                <a class="dropdown-item" href="<?= base_url();?>index.php/welcome/serviks">kanker Serviks</a>
+                <a class="dropdown-item" href="<?= base_url();?>index.php/welcome/hati">Kanker Hati</a>
+                <a class="dropdown-item" href="<?= base_url();?>index.php/welcome/payudara">Kanker Payudara</a>
+                <a class="dropdown-item" href="<?= base_url();?>index.php/welcome/paru">Kanker Paru-paru</a>
+                <a class="dropdown-item" href="<?= base_url();?>index.php/welcome/lambung">Kanker Lambung</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tips</a>
+              <a class="nav-link" href="<?= base_url();?>index.php/welcome/tips">Tips</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Rumah Sakit</a>
+              <a class="nav-link" href="<?= base_url();?>index.php/welcome/rumahsakit">Rumah Sakit</a>
             </li>
             <li class="nav-item">
               <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account <img style="width: 27px;" src="<?php echo $this->config->item('base_url'); ?>assets/person.png" alt=""></a>

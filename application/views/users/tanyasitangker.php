@@ -86,15 +86,9 @@
         top: 455px;
         border-color: black;
       }
-      #btnTanyakan{
+      #btntanya{
         margin-top: 520px;
         margin-left: 650px;
-      }
-      .btn-secondary{
-        background: #BA7777;
-        width: 95px;
-        height: 40px;
-        font-size: 13px;
       }
       #imgakhir{
         width: 421px;
@@ -123,8 +117,8 @@
             <div class="card-body">
               <h5 class="card-title text-left ">Si Tangker Butuh <br> Pertanyaan dari kamu</h5>
               <p class="card-text text-left">*Silahkan isi form dibawah ini</p>
-              <img class="imgcard" src="assets/form.png" alt="">
-              <img class="img-hiasan" src="assets/orang.png" alt="">
+              <img class="imgcard" src="imghome/form.png" alt="">
+              <img class="img-hiasan" src="imghome/orang.png" alt="">
               <form action="">
                   <div class="form-group">
                     <label id="label1" for="">Nama kamu</label>
@@ -138,7 +132,7 @@
                     <label id="label3" for="">Apa Pertanyaan Kamu?</label>
                     <textarea class="form-control" id="input-tanya" ></textarea>
                   </div>
-                  <button type="button" class="btn btn-secondary" id="btnTanyakan">Tanyakan</button>
+                  <button type="button" id="btntanya" class="btn btn-secondary">Tanyakan</button>
               </form>
             </div>
           </div>

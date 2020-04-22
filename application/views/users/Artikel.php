@@ -52,6 +52,7 @@
   </style>
   <body>
       <!-- isi artikel -->
+      <!-- isi artikel -->
       <div class="card text-center">
             <div class="card-body"><br>
                 <img id="imgkonten" src="" alt=""> <!-- gambar konten -->

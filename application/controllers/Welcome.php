@@ -29,6 +29,40 @@ class Welcome extends CI_Controller {
 		$this->load->view('users/home');
 	}
 
+	public function serviks() {
+		$this->load->view('users/header');
+		$this->load->view('users/artikelkankerserviks');
+	}
+
+	public function hati() {
+		$this->load->view('users/header');
+		$this->load->view('users/artikelkankerhati');
+	}
+	public function payudara() {
+		$this->load->view('users/header');
+		$this->load->view('users/artikelkankerpayudara');
+	}
+	public function paru() {
+		$this->load->view('users/header');
+		$this->load->view('users/artikelkankerparu');
+	}
+	public function lambung() {
+		$this->load->view('users/header');
+		$this->load->view('users/artikelkankerlambung');
+	}
+	public function TanyaTangker() {
+		$this->load->view('users/header');
+		$this->load->view('users/tanyasitangker');
+	}
+	public function tips() {
+		$this->load->view('users/header');
+		$this->load->view('users/tipspage');
+	}
+	public function rumahsakit() {
+		$this->load->view('users/header');
+		$this->load->view('users/listrumahsakit');
+	}
+
 	public function Login() {
 		$message="Invalid email or password";
 		if ($this->input->method() == 'post') {
