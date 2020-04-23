@@ -22,6 +22,8 @@ class Welcome extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('M_Login');
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
 	}
 	public function index()
 	{
@@ -54,20 +56,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('users/header');
 		$this->load->view('users/tanyasitangker');
 	}
-	public function create() {
-		$this->load->model("M_TanyaTangker");
-		$this->M_TanyaTangker->createData();
-		redirect("index.php/welcome/TanyaTangker");
-	}
 	public function tips() {
 		$this->load->view('users/header');
 		$this->load->view('users/tipspage');
 	}
 	public function rumahsakit() {
-		$this->load->model('M_RumahSakit');
-		$data['result'] = $this->M_RumahSakit->getAllData();
 		$this->load->view('users/header');
-		$this->load->view('users/listrumahsakit', $data);
+		$this->load->view('users/listrumahsakit');
 	}
 
 	public function Login() {
@@ -90,7 +85,26 @@ class Welcome extends CI_Controller {
 	}
 
 	public function Register() {
-		$this->load->view('users/header');
-		$this->load->view('users/home');
+	$this->form_validation->set_rules('firstName','firstName','trim|required|min_length[4]');
+	$this->form_validation->set_rules('lastName','lastName','trim|required|min_length[4]');
+	$this->form_validation->set_rules('email', 'Email','trim|required|valid_email');
+	$this->form_validation->set_rules('password','Password','trim|required|matches[passconf]');
+	$this->form_validation->set_rules('passconf','Password','trim|required|matches[password]');
+		if($this->form_validation->run() == false){
+			echo "data gagal dibuat!";
+			// $this->load->view('users/header');
+			// $this->load->view('users/home');
+		}else{
+			$data = array (
+			'firstName' => $this->input->post('firstName'),
+			'lastName' => $this->input->post('lastName'),
+			'email' => $this->input->post('email'),
+			'password' => $this->input->post('password')
+				);
+			$this->M_Login->regist($data);
+			redirect(base_url());
+			// echo "data berhasil dibuat!";
+		}
+
 	}
 }
