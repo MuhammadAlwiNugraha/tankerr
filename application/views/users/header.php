@@ -11,7 +11,6 @@
     <title>Home</title>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
       <a class="navbar-brand" href="#"><img style="width: 140px;" src="<?php echo $this->config->item('base_url'); ?>assets/logotubes.png" alt=""></a>
@@ -21,10 +20,6 @@
       <div class="collapse navbar-collapse w-100 order-4 dual-collapse2" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto ">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="<?= base_url();?>index.php/welcome/index">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="<?= base_url();?>index.php/welcome/tanyatangker">Tanya Si Tangker</a>
             </li>
             <li class="nav-item dropdown">
@@ -46,7 +41,7 @@
               <a class="nav-link" href="<?= base_url();?>index.php/welcome/rumahsakit">Rumah Sakit</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account  <?php echo $this->session->userdata("username"); ?><img style="width: 27px;" src="<?php echo $this->config->item('base_url'); ?>assets/person.png" alt=""></a>
+              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account <img style="width: 27px;" src="<?php echo $this->config->item('base_url'); ?>assets/person.png" alt=""></a>
             </li>
           </ul>
         </div>
@@ -77,9 +72,9 @@
           <?php endif ?>
         <p style="color: white;">Silahkan login terlebih dahulu</p></center>
 
-        <form class="user" method="POST" action="<?= base_url('login/do_login') ?>"> <!-- baru bisa login admin -->
+        <form class="user" method="POST" action="<?= base_url('login/aksi_login') ?>">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="email" placeholder="Masukkan email" autocomplete="off" required name="email">
+                      <input type="text" class="form-control" id="username" placeholder="Masukkan Username" autocomplete="off" required name="username">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required name="password">
@@ -88,13 +83,26 @@
                       <select name="role" id="role" class="form-control" required>
                         <option value="">Masuk Sebagai</option>
                         <option value="user">user</option>
-                        <option value="admin">admin</option>
+                        <option value="login">Admin</option>
                       </select>
                     </div>
                     <div class="text-center mb-3">
                     <button type="submit" class="btn btn-secondary" name="login">Login</button>
                   </div>
         </form>
+        <!-- <form action="<?= base_url();?>index.php/welcome/login/" method="post">
+          <div class="form-group mb-2 ">
+            <label style="color: white;" for="email">Your email</label>
+            <input type="email" name="email" id="Form-email" placeholder="Enter Email" class="form-control validate" required="required">
+          </div>
+          <div class="form-group mb-4">
+            <label style="color: white;" for="password">Password</label>
+            <input type="password" name="password" placeholder="Enter Password"  id="Form-password" class="form-control validate" required="required">
+          </div>
+          <div class="text-center mb-3">
+          <button style="color: white;" type="submit" class="btn btn-secondary">Sign in</button>
+        </div>
+        </form> -->
         <center>
           <p>Anda belum punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Registerform" data-dismiss="modal">Buat akun!</a></p>
         </center>
@@ -116,24 +124,24 @@
           <div class="row">
             <div class="col">
               <label style="color: white;" for="first-name">First name</label>
-              <input type="text" name="firstName" id="firstName" required value="<?php echo set_value('firstName'); ?>" class="form-control validate">
+              <input type="text" name="firstname" id="Form-firstname" class="form-control validate">
             </div>
             <div class="col">
               <label style="color: white;" for="last-name">Last name</label>
-              <input type="text" name="lastName" id="lastName" value="<?php echo set_value('lastName'); ?>" required class="form-control validate">
+              <input type="text" name="lastname" id="Form-lastname" class="form-control validate">
             </div>
           </div>
           <div class="form-group mb-2 ">
             <label style="color: white;" for="email">Your email</label>
-            <input type="email" id="email" name="email" value="<?php echo set_value('email'); ?>" required class="form-control validate">
+            <input type="email" id="regist-email" class="form-control validate">
           </div>
           <div class="form-group mb-2">
             <label style="color: white;" for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control validate">
+            <input type="password" name="regist-password" id="Form-password" class="form-control validate">
           </div>
           <div class="form-group mb-4">
             <label style="color: white;" for="password">Confirm Password</label>
-            <input type="password" name="passconf" id="passconf" class="form-control validate">
+            <input type="password" name="con-password" id="Form-con-password" class="form-control validate">
           </div>
           <div class="text-center mb-3">
           <button style="color: white;" type="submit" class="btn btn-secondary">Sign in</button>

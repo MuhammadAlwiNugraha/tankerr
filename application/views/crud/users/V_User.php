@@ -23,7 +23,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_User/') ?>">User</a>0
+          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_User/') ?>">User</a>
           <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_RumahSakit/') ?>">Rumah Sakit</a>
           <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_TanyaTangker/') ?>">Tanya Tangker</a>
           <a class="nav-item nav-link" href="<?php echo base_url('login/logout'); ?>">Logout</a>

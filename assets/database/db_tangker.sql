@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2020 at 10:26 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Apr 23, 2020 at 03:23 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,7 +31,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,8 +39,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `nama`, `email`, `username`, `password`) VALUES
-(1, 'admin', 'alwi@n.com', 'admin', '123');
+INSERT INTO `admin` (`id`, `nama`, `username`, `password`) VALUES
+(1, 'admin', 'admin', '123');
 
 -- --------------------------------------------------------
 
@@ -62,11 +61,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `email`, `firstName`, `lastName`, `password`) VALUES
-(1, 'admin@gmail.com', 'admin', 'admin', '1234'),
-(7, 'huehuelord@gmail.com', 'huehue', 'lord', '1234'),
-(8, 'asadasd@gmail.com', 'saddas', 'saddsa', 'qwe123'),
-(9, 'Alwi@alwi.com', 'Alwi', 'Alwi', 'hoho123'),
-(10, 'sasa@gmail.com', 'sasa', 'sasa', 'sasa123');
+(7, 'huehuelord@gmail.com', 'huehue', 'lord', '1234');
 
 -- --------------------------------------------------------
 
@@ -86,7 +81,9 @@ CREATE TABLE `rumahsakit` (
 --
 
 INSERT INTO `rumahsakit` (`id`, `nama`, `nohp`, `alamat`) VALUES
-(1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510');
+(1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510'),
+(3, 'RSU. VINA ESTETICA', '(061) 4521491', 'Jl. Iskandar Muda No.119, Sei Sikambing D, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111'),
+(4, 'Yayasan Kanker Indonesia', '(061) 4513451', 'Jl. Iskandar Muda No.272, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20112');
 
 -- --------------------------------------------------------
 
@@ -106,17 +103,13 @@ CREATE TABLE `tanyatangker` (
 --
 
 INSERT INTO `tanyatangker` (`id`, `email`, `nama`, `pertanyaan`) VALUES
-(2, 'huehuelord@gmail.com', 'Yabi', 'sak berak om');
+(2, 'huehuelord@gmail.com', 'Yabi', 'sak berak om'),
+(3, 'huehuelord@gmail.com', 'huelord', 'saya pingin punya jodoh'),
+(4, 'gaylord@gmail.com', 'gay', 'huehueuecokcokcok');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `profile`
@@ -144,19 +137,19 @@ ALTER TABLE `tanyatangker`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `rumahsakit`
 --
 ALTER TABLE `rumahsakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tanyatangker`
 --
 ALTER TABLE `tanyatangker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
