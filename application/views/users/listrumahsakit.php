@@ -54,74 +54,38 @@
             <div class="row">
                 <div class="col">
                     <div class="card card-isi bg-light mb-3">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="image/happy1.jpg" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <p class="card-text">blm di isi</p>
-                              <h6 class="card-title">Untitled</h6>
+                            <div class="card-body text-center">
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
                             </div>
-                          </div>
-                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card card-isi bg-light mb-3">
+                            <div class="card-body text-center">
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card card-isi bg-light mb-3">
+                            <div class="card-body text-center">
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
+                            </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="card card-isi bg-light mb-3">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="image/happy1.jpg" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <p class="card-text">blm di isi</p>
-                              <h6 class="card-title">Untitled</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card card-isi bg-light mb-3">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="image/happy1.jpg" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <p class="card-text">belum di isi</p>
-                              <h6 class="card-title">Untitled</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card card-isi bg-light mb-3">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="image/happy1.jpg" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <p class="card-text">blm di isi</p>
-                              <h6 class="card-title">Untitled</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
       </div>
   <!-- end main-card -->  

@@ -13,8 +13,8 @@ class M_admin extends CI_Model{
 		return $query->row();
 	}
 
-	public function lihat_username($username){
-		$query = $this->db->get_where($this->_table, ['username' => $username]);
+	public function lihat_email($email){
+		$query = $this->db->get_where($this->_table, ['email' => $email]);
 		return $query->row();
 	}
 }
