@@ -17,13 +17,13 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="<?php echo base_url() ?>">Dashboard - <?php echo $this->session->userdata("username"); ?></a>
+      <a class="navbar-brand" href="<?php echo site_url('index.php/C_User/') ?>">Dashboard</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_User/') ?>">User</a>0
+          <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_User/') ?>">User</a>
           <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_RumahSakit/') ?>">Rumah Sakit</a>
           <a class="nav-item nav-link" href="<?php echo site_url('index.php/C_TanyaTangker/') ?>">Tanya Tangker</a>
           <a class="nav-item nav-link" href="<?php echo base_url('login/logout'); ?>">Logout</a>

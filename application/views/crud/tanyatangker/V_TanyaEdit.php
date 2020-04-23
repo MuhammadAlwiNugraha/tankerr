@@ -17,7 +17,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="<?php echo base_url() ?>">Dashboard</a>
+      <a class="navbar-brand" href="<?php echo site_url('index.php/C_User/') ?>">Dashboard</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,21 +31,21 @@
     </nav>
     
   	<div class="container">
-  	<form method="post" action="<?= base_url();?>index.php/C_TanyaTangker/create">
+    <form method="post" action="<?php echo site_url('index.php/C_TanyaTangker/update')?>/<?php echo $row->id; ?>">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="text" class="form-control" name="email" value="<?php echo $row->email; ?>" aria-describedby="emailHelp" disabled>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" value="<?php echo $row->email; ?>" aria-describedby="emailHelp" >
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Nama</label>
             <input type="text" class="form-control" name="nama" value="<?php echo $row->nama; ?>" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Pertanyaan</label>
-            <input type="text" class="form-control" name="pertanyaan" value="<?php echo $row->pertanyaan; ?>" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">pertanyaan</label>
+            <input type="text" class="form-control" name="pertanyaan" value="<?php echo $row->pertanyaan; ?>" aria-describedby="emailHelp"=>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-  	</div>
+        </form> 
+    </div>
   </body>
 </html>

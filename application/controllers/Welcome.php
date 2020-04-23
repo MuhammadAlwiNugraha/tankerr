@@ -56,7 +56,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('users/header');
 		$this->load->view('users/tanyasitangker');
 	}
-	public function create() {
+	public function createTanya() {
 		$this->load->model("M_TanyaTangker");
 		$this->M_TanyaTangker->createData();
 		redirect("index.php/welcome/TanyaTangker");

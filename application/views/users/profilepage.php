@@ -114,18 +114,18 @@
               <img class="img-hiasan" src="Imghome/orang2.png" alt="">
               <form action="">
                   <div class="form-group">
-                    <label id="label1" for="">Nama kamu</label>
-                    <input type="text" id="inputnama" class="form-control validate">
+                    <label id="label2" for="email">Email kamu</label>
+                    <input type="email" id="inputemail" value="<?php echo $this->session->userdata("email"); ?>" name="email" class="form-control validate" disabled>
                   </div>
                   <div class="form-group">
-                    <label id="label2" for="email">Email kamu</label>
-                    <input type="email" id="inputemail" class="form-control validate">
+                    <label id="label1" for="">Nama kamu</label>
+                    <input type="text" id="inputnama" name="nama" class="form-control validate">
                   </div>
                   <div class="form-group">
                     <label id="label3" for="">Password</label>
-                    <input type="password" id="inputpassword" class="form-control validate">
+                    <input type="password" id="inputpassword" name="password"class="form-control validate">
                   </div>
-                  <button type="button" id="btnubah" class="btn btn-secondary">ubah</button>
+                  <button type="submit" id="btnubah" class="btn btn-secondary">ubah</button>
               </form>
             </div>
           </div>s
