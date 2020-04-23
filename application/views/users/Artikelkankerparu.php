@@ -136,13 +136,13 @@
       <div class="card card-samping1" style="width: 18rem;">
         <img src="<?php echo $this->config->item('base_url'); ?>assets/hospital.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-        <a class="card-text" style="color: black;" href="">daftar rumah sakit penanganan pasien kanker di Indonesia</a>
+        <a class="card-text" style="color: black;" href="<?= base_url();?>index.php/welcome/rumahsakit">daftar rumah sakit penanganan pasien kanker di Indonesia</a>
         </div>
       </div>
       <div class="card card-samping2" style="width: 18rem;">
         <img src="<?php echo $this->config->item('base_url'); ?>assets/kanker.jpg" class="card-img-top" alt="...">
         <div class="card-body ">
-          <a class="card-text" style="color: black;"  href="">Kenali Tips dan Cara Mencegah Kanker Sejak Dini</a>
+          <a class="card-text" style="color: black;"  href="<?= base_url();?>index.php/welcome/tips">Kenali Tips dan Cara Mencegah Kanker Sejak Dini</a>
         </div>
       </div>
 
