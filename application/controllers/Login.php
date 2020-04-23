@@ -11,17 +11,7 @@ class Login extends CI_Controller{
 	function index(){
 		$this->load->view('index.php/C_User');
 	}
- 	
-	// public function proses_login(){
-	// 	if($this->input->post('status') === "user") $this->n_login($this->input->post('email'));
-	// 	elseif($this->input->post('status') === 'admin') $this->do_login($this->input->post('email'));
-	// 	else {
-	// 		redirect(base_url(status-tidak-tersedia));
-	// 	}
-	// }
-
-
-	//buat login admin
+ 
 	function do_login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
@@ -53,7 +43,6 @@ class Login extends CI_Controller{
 		$password = $this->input->post('password');
 		$where = array(
 			'email' => $email,
-			'firstName' => $firstName,
 			'password' => $password
 			);
 		$cek = $this->M_login->cek_login("profile",$where)->num_rows();
@@ -61,7 +50,6 @@ class Login extends CI_Controller{
  
 			$data_session = array(
 				'email' => $email,
-				'firstName' => $firstName,
 				'status' => "user"
 				);
  

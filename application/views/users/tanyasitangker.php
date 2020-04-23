@@ -117,22 +117,22 @@
             <div class="card-body">
               <h5 class="card-title text-left ">Si Tangker Butuh <br> Pertanyaan dari kamu</h5>
               <p class="card-text text-left">*Silahkan isi form dibawah ini</p>
-              <img class="imgcard" src="<?php echo $this->config->item('base_url'); ?>assets/form.png" alt="">
-              <img class="img-hiasan" src="<?php echo $this->config->item('base_url'); ?>assets/orang.png" alt="">
-              <form method="post" action="<?= base_url();?>index.php/welcome/create">
+              <img class="imgcard" src="imghome/form.png" alt="">
+              <img class="img-hiasan" src="imghome/orang.png" alt="">
+              <form action="">
                   <div class="form-group">
                     <label id="label1" for="">Nama kamu</label>
-                    <input type="text" id="inputnama" name="nama" class="form-control validate">
+                    <input type="text" id="inputnama" class="form-control validate">
                   </div>
                   <div class="form-group">
                     <label id="label2" for="email">Email kamu</label>
-                    <input type="email" id="inputemail" name="email" class="form-control validate">
+                    <input type="email" id="inputemail" class="form-control validate">
                   </div>
                   <div class="form-group">
                     <label id="label3" for="">Apa Pertanyaan Kamu?</label>
-                    <textarea class="form-control" id="input-tanya" name="pertanyaan" ></textarea>
+                    <textarea class="form-control" id="input-tanya" ></textarea>
                   </div>
-                  <button type="submit" id="btntanya" class="btn btn-secondary">Tanyakan</button>
+                  <button type="button" id="btntanya" class="btn btn-secondary">Tanyakan</button>
               </form>
             </div>
           </div>

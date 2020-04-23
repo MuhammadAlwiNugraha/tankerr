@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2020 at 03:23 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Generation Time: Apr 22, 2020 at 12:25 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -61,6 +61,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `email`, `firstName`, `lastName`, `password`) VALUES
+(1, 'admin@gmail.com', 'admin', 'admin', '1234'),
 (7, 'huehuelord@gmail.com', 'huehue', 'lord', '1234');
 
 -- --------------------------------------------------------
@@ -81,9 +82,7 @@ CREATE TABLE `rumahsakit` (
 --
 
 INSERT INTO `rumahsakit` (`id`, `nama`, `nohp`, `alamat`) VALUES
-(1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510'),
-(3, 'RSU. VINA ESTETICA', '(061) 4521491', 'Jl. Iskandar Muda No.119, Sei Sikambing D, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111'),
-(4, 'Yayasan Kanker Indonesia', '(061) 4513451', 'Jl. Iskandar Muda No.272, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20112');
+(1, 'Mount Elizabeth Orchard', '(65) 6737 2666', '3 Mount Elizabeth Singapore, Singapore 228510');
 
 -- --------------------------------------------------------
 
@@ -103,13 +102,17 @@ CREATE TABLE `tanyatangker` (
 --
 
 INSERT INTO `tanyatangker` (`id`, `email`, `nama`, `pertanyaan`) VALUES
-(2, 'huehuelord@gmail.com', 'Yabi', 'sak berak om'),
-(3, 'huehuelord@gmail.com', 'huelord', 'saya pingin punya jodoh'),
-(4, 'gaylord@gmail.com', 'gay', 'huehueuecokcokcok');
+(2, 'huehuelord@gmail.com', 'Yabi', 'sak berak om');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `profile`
@@ -143,13 +146,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `rumahsakit`
 --
 ALTER TABLE `rumahsakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tanyatangker`
 --
 ALTER TABLE `tanyatangker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

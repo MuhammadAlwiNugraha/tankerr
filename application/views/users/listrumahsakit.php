@@ -51,19 +51,41 @@
       <div class="card main-card text-center">
         <div class="card-body">
             <h3 class="card-title text-left">Rekomendasi untuk anda</h3><br><br>
-            <?php foreach($result as $row) {?>
             <div class="row">
                 <div class="col">
                     <div class="card card-isi bg-light mb-3">
                             <div class="card-body text-center">
-                              <h4 class="card-title"><?php echo $row->nama; ?></h4><hr>
-                              <p class="card-text"><?php echo $row->nohp; ?></p>
-                              <p><?php echo $row->alamat; ?></p>
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
                             </div>
                     </div>
                 </div>
             </div>
-            <?php } ?> 
+            <div class="row">
+                <div class="col">
+                    <div class="card card-isi bg-light mb-3">
+                            <div class="card-body text-center">
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card card-isi bg-light mb-3">
+                            <div class="card-body text-center">
+                              <h4 class="card-title">Rumah Sakit Hasan Sadikin</h4><hr>
+                              <p class="card-text">No Tlpn: 0800808808</p>
+                              <p>Alamat: jln.hasan Sadikin no 290 A blok b </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
       </div>
   <!-- end main-card -->  
