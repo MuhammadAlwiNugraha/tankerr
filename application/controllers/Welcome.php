@@ -56,13 +56,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('users/header');
 		$this->load->view('users/tanyasitangker');
 	}
+	public function create() {
+		$this->load->model("M_TanyaTangker");
+		$this->M_TanyaTangker->createData();
+		redirect("index.php/welcome/TanyaTangker");
+	}
 	public function tips() {
 		$this->load->view('users/header');
 		$this->load->view('users/tipspage');
 	}
 	public function rumahsakit() {
+		$this->load->model('M_RumahSakit');
+		$data['result'] = $this->M_RumahSakit->getAllData();
 		$this->load->view('users/header');
-		$this->load->view('users/listrumahsakit');
+		$this->load->view('users/listrumahsakit', $data);
 	}
 
 	public function Login() {
