@@ -5,7 +5,6 @@ class C_RumahSakit extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-
 		if($this->session->userdata('status') != "admin"){
 			redirect(base_url());
 		}
