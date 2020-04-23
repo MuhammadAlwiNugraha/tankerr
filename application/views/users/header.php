@@ -11,7 +11,6 @@
     <title>Home</title>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
       <a class="navbar-brand" href="#"><img style="width: 140px;" src="<?php echo $this->config->item('base_url'); ?>assets/logotubes.png" alt=""></a>
@@ -46,8 +45,16 @@
               <a class="nav-link" href="<?= base_url();?>index.php/welcome/rumahsakit">Rumah Sakit</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" >Account  <?php echo $this->session->userdata("username"); ?><img style="width: 27px;" src="<?php echo $this->config->item('base_url'); ?>assets/person.png" alt=""></a>
+              <a class="nav-item nav-link" id="btnlogin" href="#"  data-toggle="modal" data-target="#Loginform" ><img style="width: 27px;" src="<?php echo $this->config->item('base_url'); ?>assets/person.png" alt=""></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url();?>index.php/welcome/index"><?php echo $this->session->userdata("email"); ?></a>
+            </li>
+            <?php if($this->session->userdata('status') == "user"): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('login/logout'); ?>">Logout</a>
+            </li>
+            <?php endif ?>
           </ul>
         </div>
       </div>
@@ -77,6 +84,53 @@
           <?php endif ?>
         <p style="color: white;">Silahkan login terlebih dahulu</p></center>
 
+        <form class="user" method="POST" action="<?= base_url('login/n_login') ?>"> <!-- baru bisa login user -->
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="email" placeholder="Masukkan email" autocomplete="off" required name="email">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required name="password">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-secondary" name="login" value="user">Login</button>
+                  </div>
+        </form>
+        <center>
+          <p>Anda belum punya akun? <a style="color: white;" href="#" data-toggle="modal" data-target="#Registerform" data-dismiss="modal">Buat akun!</a></p>
+          <a style="color: white;" href="#" data-toggle="modal" data-target="#LoginformAdmin" data-dismiss="modal">Admin Login</a>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -_- -->
+
+
+<!-- ini form login admin -->
+<div class="modal fade" id="LoginformAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #FFC8CB;">
+      <div class="modal-body">
+        <center><img src="<?php echo $this->config->item('base_url'); ?>assets/logotubes.png" style="width: 300px;" alt="">
+          <?php if ($this->session->flashdata('success')) : ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('success') ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <?php elseif($this->session->flashdata('error')) : ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('error') ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <?php endif ?>
+        <p style="color: white;">Silahkan login terlebih dahulu</p></center>
+
         <form class="user" method="POST" action="<?= base_url('login/do_login') ?>"> <!-- baru bisa login admin -->
                     <div class="form-group">
                       <input type="text" class="form-control" id="email" placeholder="Masukkan email" autocomplete="off" required name="email">
@@ -85,14 +139,9 @@
                       <input type="password" class="form-control" id="password" placeholder="Masukkan Password" required name="password">
                     </div>
                     <div class="form-group">
-                      <select name="role" id="role" class="form-control" required>
-                        <option value="">Masuk Sebagai</option>
-                        <option value="user">user</option>
-                        <option value="admin">admin</option>
-                      </select>
                     </div>
                     <div class="text-center mb-3">
-                    <button type="submit" class="btn btn-secondary" name="login">Login</button>
+                    <button type="submit" class="btn btn-secondary" name="login" value="admin">Login</button>
                   </div>
         </form>
         <center>
@@ -102,7 +151,7 @@
     </div>
   </div>
 </div>
-<!-- -_- -->
+
 
 
 <!-- ini form Register modal -->

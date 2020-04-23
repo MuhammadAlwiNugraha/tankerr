@@ -44,7 +44,6 @@ class Login extends CI_Controller{
  
 		}else{
 			echo "email dan password salah !";
-			redirect(base_url(admin));
 		}
 	}
 
@@ -61,17 +60,15 @@ class Login extends CI_Controller{
  
 			$data_session = array(
 				'email' => $email,
-				'username' => $username,
+				'firstName' => $firstName,
 				'status' => "user"
 				);
  
 			$this->session->set_userdata($data_session);
- 			echo "benar";
-			redirect('crud/users/V_User');
+			redirect(base_url());
  
 		}else{
 			echo "email dan password salah !";
-			redirect(base_url(user));
 
 		}
 	}
