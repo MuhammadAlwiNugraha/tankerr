@@ -119,7 +119,7 @@
               <p class="card-text text-left">*Silahkan isi form dibawah ini</p>
               <img class="imgcard" src="<?php echo $this->config->item('base_url'); ?>assets/form.png" alt="">
               <img class="img-hiasan" src="<?php echo $this->config->item('base_url'); ?>assets/orang.png" alt="">
-              <form method="post" action="<?= base_url();?>index.php/welcome/create">
+              <form method="post" action="<?= base_url();?>index.php/C_tanyatangker/create">
                   <div class="form-group">
                     <label id="label1" for="">Nama kamu</label>
                     <input type="text" id="inputnama" name="nama" class="form-control validate">
